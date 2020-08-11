@@ -100,12 +100,13 @@ Edge模块内置凌顶自主开发的 OPCUA
 
 2.  注意：驱动不能读写优化DB块，要取消优化块访问。该系列的PLC内部的数据块（DB）有两种，一种是标准DB块，一种是优化DB块。优化DB块是无法通过数据地址进行访问的。(详细步骤可查看S7-1200测试示例)
 
-> ![](media/image4.png){width="5.425in" height="3.8680555555555554in"}
+ ![](media/image4.png)
+
+
 
 3.  注意：DB块需要开放读/写权限。
 
-> ![](media/image5.png){width="5.466666666666667in"
-> height="3.4180555555555556in"}
+> ![](media/image5.png)
 
 第2章 硬件连接
 ==============
@@ -124,8 +125,8 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 > 一般用到西门子PLC、EdgePLUS、计算机和网线。EdgePLUS有两个网口。例如：按照图示连接硬件。
 >
-> ![](media/image6.png){width="5.26548665791776in"
-> height="2.9732731846019247in"}
+> ![](media/image6.png)
+
 
 其中，Edge有两个网口，分别为Eth0和Eth1，这两个网口的可由用户设置IP地址，但是不能设置为同一网段。如果像图2-1一样连接，则PLC需要和Eth0在同一网段；计算机需要和Eth1在同一网段。例如：根据PLC的IP地址和计算机IP地址修改Edge的网口配置。
 
@@ -135,8 +136,8 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
   计算机                          192.168.1.200
   EdgePLUS   Eth0:192.168.215.2   Eth1:192.168.1.118
 
-> ![](media/image7.png){width="1.5152777777777777in"
-> height="2.2583333333333333in"}
+> ![](media/image7.png)
+
 
 2.  PLC有网口，使用交换机连接
 
@@ -150,8 +151,8 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 > 硬件连接：
 >
-> ![](media/image8.png){width="5.768055555555556in"
-> height="3.167361111111111in"}
+> ![](media/image8.png)
+
 
 3.  PLC没有有网口，使用SCANET串口转网口
 
@@ -202,13 +203,13 @@ b)  连续闪烁两次后约5秒左右再连续闪烁两次：代表SCANET无法
 
 a)  首页： SCANET基本信息，不做修改。
 
-> ![](media/image9.png){width="5.768055555555556in"
-> height="2.861111111111111in"}
+> ![](media/image9.png)
+
 
 b)  S7总线接口参数：修改S7通讯协议模式和总线波特率。您可以按照默认设置，不做修改。
 
-> ![](media/image10.png){width="5.742950568678915in"
-> height="2.298611111111111in"}
+> ![](media/image10.png)
+
 
 c)  以太网参数：
 
@@ -220,34 +221,34 @@ c)  以太网参数：
 >
 > 是，多用于连接CNC，该模式下上位机设置DSAP的第二个字节值为MPI站号。
 >
-> ![](media/image11.png){width="5.768055555555556in"
-> height="2.262820428696413in"}
+> ![](media/image11.png)
+
 
 -   方法二：使用SCANET配置软件
 
-> ![](media/image12.png){width="5.768055555555556in"
-> height="1.6602569991251093in"}
+> ![](media/image12.png)
+
 
 a)  搜索SCANET模块：
 
-> ![](media/image13.png){width="5.768055555555556in"
-> height="0.7884612860892388in"}
+> ![](media/image13.png)
+
 >
-> ![](media/image14.png){width="5.768055555555556in"
-> height="0.7243591426071742in"}
+> ![](media/image14.png)
+
 
 b)  修改IP地址：
 
-> ![](media/image15.png){width="5.128204286964129in"
-> height="1.9877121609798776in"}
+> ![](media/image15.png)
+
 >
-> ![](media/image16.png){width="5.294444444444444in"
-> height="2.358974190726159in"}
+> ![](media/image16.png)
+
 
 c)  修改通讯接口：
 
-> ![](media/image17.png){width="5.76662510936133in"
-> height="2.051281714785652in"}
+> ![](media/image17.png)
+
 
 d)  修改PLC通讯地址是否由槽号决定：
 
@@ -255,17 +256,17 @@ d)  修改PLC通讯地址是否由槽号决定：
 >
 > 是，多用于连接CNC，因为CNC中的PLC和NCK都要通讯，就必须由槽号（通过DSAP）决定。该模式下上位机设置DSAP的第二个字节值为MPI站号。
 >
-> ![](media/image18.png){width="5.768055555555556in"
-> height="1.724359142607174in"}
+> ![](media/image18.png)
+
 
 e)  通讯接口模块诊断
 
-> ![](media/image19.png){width="5.768055555555556in" height="3.28125in"}
+> ![](media/image19.png)
 
 f)  以太网服务器模块诊断：可查看有几个上位机与PLC通讯。
 
-> ![](media/image20.png){width="5.768055555555556in"
-> height="2.160255905511811in"}
+> ![](media/image20.png)
+
 
 第3章 EdgePLUS配置
 ==================
@@ -275,10 +276,10 @@ f)  以太网服务器模块诊断：可查看有几个上位机与PLC通讯。
 
 1.  打开EdgePlant配置软件，搜索Edge模块。
 
-> ![](media/image21.png){width="4.85in" height="2.591666666666667in"}
+> ![](media/image21.png)
 >
-> ![](media/image22.png){width="5.321527777777778in"
-> height="4.133333333333334in"}
+> ![](media/image22.png)
+
 
 2.  修改IP地址
 
@@ -286,15 +287,15 @@ f)  以太网服务器模块诊断：可查看有几个上位机与PLC通讯。
 >
 > 注意：您还可以选择硬件断电重启，即给EdgePLUS断电重启。
 >
-> ![](media/image23.png){width="2.123957786526684in"
-> height="2.1483869203849517in"}
+> ![](media/image23.png)
+
 
 3.2 EdgePLUS配置变量
 --------------------
 
 1.  选择应用软件------数据采集，Project_Default右击新建一个组别。
 
-> ![](media/image24.png){width="5.013216316710412in" height="2.325in"}
+> ![](media/image24.png)
 
 2.  组别名称：可以自定义修改。
 
@@ -302,13 +303,13 @@ f)  以太网服务器模块诊断：可查看有几个上位机与PLC通讯。
 
 如果配置文件中有组别不想使用，您可以右击该组别，选择删除，也可以组别启用选择否。
 
-![](media/image25.png){width="5.067797462817148in"
+![](media/image25.png)
 height="0.9902777777777778in"}
 
 3.  新建连接，右击该组别（siemens），新建一个连接
 
-> ![](media/image26.png){width="5.033333333333333in"
-> height="1.5916666666666666in"}
+> ![](media/image26.png)
+
 
 4.  选择连接驱动SIMATIC.TCP客户端（基本版）或者（高级版），二者区别请查看1.2
     驱动介绍。
@@ -333,21 +334,21 @@ height="0.9902777777777778in"}
 
 -   勾选添加内部驱动就是添加设备是否在线和标签更新时间两个标签。
 
-> ![](media/image27.png){width="5.4319444444444445in" height="3.775in"}
+> ![](media/image27.png)
 >
-> ![](media/image28.png){width="5.458333333333333in"
-> height="2.657638888888889in"}
+> ![](media/image28.png)
+
 
 5.  新建标签：右击该连接，新建一个标签。您要采集每个变量都用一个标签来表示。
 
-> ![](media/image29.png){width="5.158333333333333in"
-> height="2.0083333333333333in"}
+> ![](media/image29.png)
+
 
 -   首先根据要采集的变量确定数据类型。
 
 > 数据类型包括位值，有符号8位整数，无符号8位整数，有符号16位整数，无符号16位整数，有符号32位整数，无符号32位整数，有符号64位整数，无符号64位整数，32位单精度浮点数，64位单精度浮点数，字符串，日期时间，字节数组。其中，有符号64位整数，无符号64位整数，64位单精度浮点数和日期时间是无效的地址类型。
 >
-> ![](media/image30.png){width="5.093220691163604in" height="2.575in"}
+> ![](media/image30.png)
 
 -   再选择该变量的地址。
 
@@ -357,45 +358,45 @@ height="0.9902777777777778in"}
 >
 > 顺序控制器(S)，特殊标志位(SM),标准计数器(C)，模拟量输入(AI)，模拟量输出(AQ)，高速计数器(HC)。都是S7-200才有的数据区。
 >
-> ![](media/image31.png){width="2.3033169291338584in"
-> height="1.5254232283464566in"}
-> ![](media/image32.png){width="2.449152449693788in"
-> height="1.5918274278215223in"}
+> ![](media/image31.png)
+
+> ![](media/image32.png)
+
 
 -   如果该变量需要配置成可写入，即可以在客户端修改变量值，需要将写值使能修改成是。
 
-> ![](media/image33.png){width="5.768055555555556in"
-> height="1.8220341207349082in"}
+> ![](media/image33.png)
+
 
 -   第一个标签建立成功
 
-> ![](media/image34.png){width="5.768055555555556in"
-> height="2.2840277777777778in"}
+> ![](media/image34.png)
+
 
 6.  测试过程中，为西门子PLC1200配置了如下变量，包括：输入映像区(I)，输出映像区(Q)，内部标志位(M)，内部数据块(DB)以及他们分别可选择的数据类型。
 
-> ![](media/image35.png){width="5.768055555555556in"
-> height="3.527083333333333in"}
+> ![](media/image35.png)
+
 >
-> ![](media/image36.png){width="2.211198600174978in"
-> height="4.237287839020122in"}
-> ![](media/image37.png){width="2.101583552055993in"
-> height="4.161017060367454in"}
+> ![](media/image36.png)
+
+> ![](media/image37.png)
+
 
 3.3 下载配置到EdgePLUS中
 ------------------------
 
 1.  在项目------下载配置模块。
 
-> ![](media/image38.png){width="5.768055555555556in"
-> height="2.0075765529308836in"}
+> ![](media/image38.png)
 
-![](media/image39.png){width="5.768055555555556in"
+
+![](media/image39.png)
 height="2.598611111111111in"}
 
 2.  提示完成。
 
-![](media/image40.png){width="5.768055555555556in" height="2.525in"}
+![](media/image40.png)
 
 3.4 启动MDC_OPCUA_SERVER
 ------------------------
@@ -406,10 +407,10 @@ height="2.598611111111111in"}
 >
 > 修改配置变量之后也需要重启进程。
 
-![](media/image41.png){width="5.768055555555556in"
+![](media/image41.png)
 height="2.967361111111111in"}
 
-![](media/image42.png){width="5.768055555555556in"
+![](media/image42.png)
 height="2.6694444444444443in"}
 
 2.  如果您在进程列表中没有看到MDC_OPCUA_SERVER的进程，您需要将MDC_OPCUA_SERVER加入开机启动中。
@@ -424,23 +425,23 @@ height="2.6694444444444443in"}
 
 -   启动延时：0毫秒，表示开机之后间隔多长时间启动该软件，如果想要开机即启动就设置为0毫秒。
 
-> ![](media/image43.png){width="5.767134733158355in" height="2.175in"}
+> ![](media/image43.png)
 
 -   配置完成，点击下载配置，就可以将MDC_OPCUA_SERVER设置为开机启动。
 
-> ![](media/image44.png){width="5.765205599300088in"
-> height="0.8030304024496938in"}
+> ![](media/image44.png)
+
 
 -   然后重启Edge模块，您可以选择断电重启，也可以通过EdgePlant软件选择模块重启，如果重启成功，Edge模块的指示灯POW和SYS常亮。
 
-> ![](media/image45.png){width="2.189394138232721in"
-> height="1.5202788713910762in"}
-> ![](media/image46.jpeg){width="1.1983858267716536in"
-> height="1.4848490813648294in"}
+> ![](media/image45.png)
+
+> ![](media/image46.jpeg)
+
 
 -   重新搜索模块，您可以在系统设置------系统信息------进程列表看到MDC_OPCUA_SERVER的进程。
 
-> ![](media/image47.png){width="5.768055555555556in" height="2.275in"}
+> ![](media/image47.png)
 
 3.5 OPCUA客户端展示
 -------------------
@@ -451,26 +452,26 @@ height="2.6694444444444443in"}
 
 -   点击订阅，数据会实时刷新。
 
-![](media/image48.png){width="4.534027777777778in"
+![](media/image48.png)
 height="2.0833333333333335in"}
 
-![](media/image49.png){width="5.243287401574803in"
+![](media/image49.png)
 height="3.316666666666667in"}
 
 2.  写入：配置变量选择写值使能为是的变量可以写入。例如变量：MB100有符号8位整数，写值使能:是
 
-> ![](media/image50.png){width="5.191666666666666in"
-> height="2.2333333333333334in"}
+> ![](media/image50.png)
+
 
 -   您可以用客户端测试写入，或者您开发的OPCUA客户端软件进行写值。示例：将100值改为50。
 
 -   修改方法：直接双击该标签值，写入新值
 
-> ![](media/image51.png){width="5.768055555555556in"
-> height="3.1194444444444445in"}
+> ![](media/image51.png)
+
 >
-> ![](media/image52.png){width="5.768055555555556in"
-> height="2.720833333333333in"}
+> ![](media/image52.png)
+
 
 第4章 变量介绍
 ==============
@@ -511,30 +512,30 @@ height="3.316666666666667in"}
 
 注意：字符串类型和字节数组类型虽然每个区域都可以选择该类型，但是不太常用。例如，DB10中存放了String类型的数据,占用255个字节。
 
-![](media/image53.png){width="5.768055555555556in"
+![](media/image53.png)
 height="1.611398731408574in"}
 
-![](media/image54.png){width="5.768055555555556in"
+![](media/image54.png)
 height="2.2847222222222223in"}
 
 -   字节数组类型：字节数组代表一块数据，不是一个变量，是一块数据，读一块数据区。如从DB10.DBB0到DB10.DBB200。
 
-![](media/image55.png){width="5.6125in" height="2.7979276027996502in"}
+![](media/image55.png)
 
-![](media/image56.png){width="5.768055555555556in"
+![](media/image56.png)
 height="1.3395833333333333in"}
 
 -   字符串类型：例如DB10中存放了String类型的数据'HELLO,SCAPEAK!',字符串类型，写值使能：是。
 
-![](media/image57.png){width="5.768055555555556in"
+![](media/image57.png)
 height="4.633333333333334in"}
 
-![](media/image58.png){width="5.768055555555556in"
+![](media/image58.png)
 height="1.4152777777777779in"}
 
 > 修改该值
 
-![](media/image59.png){width="5.768055555555556in"
+![](media/image59.png)
 height="1.1513888888888888in"}
 
 4.2 S7-200数据区域说明（除通用数据区域之外）
@@ -542,8 +543,8 @@ height="1.1513888888888888in"}
 
 > 注意：S7-200的V区请选择DB块号1。例如：采集VB1，应如下设置。
 >
-> ![](media/image60.png){width="5.768055555555556in"
-> height="3.6534722222222222in"}
+> ![](media/image60.png)
+
 
   变量区域   变量类型            变量地址     读写           说明
   ---------- ------------------- ------------ -------------- --------------------------------------------------------------------------------
@@ -591,93 +592,93 @@ height="1.1513888888888888in"}
 
 1)  打开软件，创建新项目
 
-> ![](media/image61.png){width="4.87834208223972in"
-> height="1.3847222222222222in"}
+> ![](media/image61.png)
+
 
 2)  打开项目视图
 
-> ![](media/image62.png){width="4.539822834645669in"
-> height="2.9500798337707788in"}
+> ![](media/image62.png)
+
 
 3)  搜索可访问设备：在线访问------Realtek------更新可访问的设备，就会搜到PLC
 
-> ![](media/image63.png){width="4.527777777777778in"
-> height="1.8452384076990376in"}
+> ![](media/image63.png)
+
 
 4)  添加设备，选择对应的PLC型号
 
-> ![](media/image64.png){width="4.420635389326335in"
-> height="2.8055555555555554in"}
+> ![](media/image64.png)
+
 
 5)  选择该PLC，双击PLC，配置PLC的IP地址。在属性------常规------PROFINET接口------以太网地址------添加子网------设置PLC的IP地址和子网掩码
 
-> ![](media/image65.png){width="4.510416666666667in"
-> height="2.8333333333333335in"}
+> ![](media/image65.png)
+
 
 6)  配置访问权限：属性------常规------防护与安全------访问级别
 
-> ![](media/image66.png){width="4.553472222222222in"
-> height="2.908333333333333in"}
+> ![](media/image66.png)
+
 
 7)  属性------常规------防护与安全------连接机制，允许来自远程对象的访问
 
-> ![](media/image67.png){width="4.5680555555555555in"
-> height="2.6678783902012246in"}
+> ![](media/image67.png)
+
 
 8)  如果您用到时钟脉冲，需要先开通系统和时钟存储器。脉冲发生器------系统和时钟存储器，启用系统存储器字节，启用时钟存储器字节。
 
-> ![](media/image68.png){width="5.129166666666666in"
-> height="2.433333333333333in"}
+> ![](media/image68.png)
+
 
 9)  转至在线：PG/PC接口类型：PN/IE；PG/PC接口：Realtek；接口/子网的连接：PN/IE_1，开始搜索，搜索到该PLC，选中它，转至在线。
 
-> ![](media/image69.png){width="5.100719597550306in"
-> height="2.7777777777777777in"}
+> ![](media/image69.png)
+
 
 10) 开始编程，程序块------Main(OB块)，写梯形图程序
 
-> ![](media/image70.png){width="4.726618547681539in"
-> height="2.9124048556430444in"}
+> ![](media/image70.png)
+
 >
-> ![](media/image71.png){width="4.683452537182852in"
-> height="2.859722222222222in"}![](media/image72.png){width="4.69784230096238in"
-> height="2.4090277777777778in"}
+> ![](media/image71.png)
+
+
 
 11) 添加数据块，程序块------添加新块，添加DB数据块
 
-> ![](media/image73.png){width="4.744680664916886in"
-> height="2.634027777777778in"}
+> ![](media/image73.png)
+
 
 12) 右键选择新添加的DB数据块，选择属性
 
-> ![](media/image74.png){width="4.770213254593176in"
-> height="2.754166666666667in"}
+> ![](media/image74.png)
+
 
 13) 在对话框中选择"常规/属性"，将"优化的块访问" 取消勾选，确认修改
 
-> ![](media/image75.png){width="4.770138888888889in"
-> height="2.713888888888889in"}
+> ![](media/image75.png)
+
 
 14) 修改完成，要重新编译（要先编译才能看到偏移量）
 
-> ![](media/image76.png){width="4.897871828521435in"
-> height="2.654166666666667in"}
+> ![](media/image76.png)
+
 
 15) 添加相应寄存器，正确选择数据类型，并下载至PLC中
 
-> ![](media/image77.png){width="4.47898731408574in"
-> height="1.9272758092738407in"}
+> ![](media/image77.png)
+
 >
-> ![](media/image77.png){width="4.948532370953631in"
-> height="1.8553193350831145in"}
+> ![](media/image77.png)
+
 >
-> ![](media/image78.PNG){width="4.456944444444445in"
-> height="2.1333333333333333in"}
+> ![](media/image78.PNG)
+
 
 16) 监控：监控与强制表-监控表_1，添加要监控的变量，就可以对变量进行监控。
 
-> ![](media/image79.png){width="4.97446741032371in"
-> height="2.961702755905512in"}
+> ![](media/image79.png)
+
 
  5.2 PLC基本配置------西门子S7-300数据采集
 -----------------------------------------
@@ -693,58 +694,58 @@ height="1.1513888888888888in"}
 
 1)  打开软件，PLC-Upload Station to PG，就是将程序从PLC下载到电脑。
 
-> ![](media/image80.png){width="5.768055555555556in"
-> height="2.2666666666666666in"}
+> ![](media/image80.png)
+
 
 2)  寻找该PLC
 
-> ![](media/image81.png){width="5.768055555555556in"
-> height="2.5944444444444446in"}
+> ![](media/image81.png)
+
 
 3)  打开OB块，开始编写梯形图程序
 
-> ![](media/image82.png){width="5.768055555555556in"
-> height="2.4895833333333335in"}
+> ![](media/image82.png)
+
 >
-> ![](media/image83.png){width="5.768055555555556in"
-> height="2.660416666666667in"}
+> ![](media/image83.png)
+
 >
-> ![](media/image84.png){width="5.768055555555556in"
-> height="2.654861111111111in"}
+> ![](media/image84.png)
+
 >
-> ![](media/image85.png){width="5.768055555555556in"
-> height="2.058333333333333in"}
+> ![](media/image85.png)
+
 
 4)  添加DB块，Insert-S7 Block-Data Block
 
-> ![](media/image86.png){width="5.7671642607174105in"
-> height="1.5967738407699037in"}
+> ![](media/image86.png)
+
 >
-> ![](media/image87.png){width="5.768055555555556in"
-> height="3.017361111111111in"}
+> ![](media/image87.png)
+
 
 5)  将新修改的程序和DB块下载到PLC中。请注意，PLC要在STOP模式下才能下载，也就是将PLC打在STOP位置。
 
-> ![](media/image88.png){width="5.768055555555556in"
-> height="2.283333333333333in"}
+> ![](media/image88.png)
+
 
 6)  如果出现PLC的SF报警，可以将硬件HardWare重新下载
 
-> ![](media/image89.png){width="5.768055555555556in"
-> height="2.8506944444444446in"}
+> ![](media/image89.png)
+
 >
-> ![](media/image90.png){width="5.768055555555556in"
-> height="2.5701388888888888in"}
+> ![](media/image90.png)
+
 
 7)  Online/Offline
 
-> ![](media/image91.png){width="5.768055555555556in"
-> height="2.5902777777777777in"}
+> ![](media/image91.png)
+
 
 8)  监控
 
-> ![](media/image92.png){width="5.768055555555556in"
-> height="2.577777777777778in"}
+> ![](media/image92.png)
+
 
  5.3 PLC基本配置------西门子S7-200数据采集
 -----------------------------------------
@@ -760,27 +761,27 @@ height="1.1513888888888888in"}
 
 1)  设置PG/PC接口：设置完成点击确定
 
-> ![](media/image93.png){width="5.768055555555556in"
-> height="2.536111111111111in"}
+> ![](media/image93.png)
+
 
 2)  设置通信，与PLC建立通信
 
-> ![](media/image94.png){width="5.768055555555556in" height="2.65625in"}
+> ![](media/image94.png)
 
 3)  将程序上载到电脑
 
-> ![](media/image95.png){width="5.768055555555556in"
-> height="2.782638888888889in"}
+> ![](media/image95.png)
+
 
 4)  编写PLC程序，下载到PLC中
 
-> ![](media/image96.png){width="5.768055555555556in"
-> height="2.6493055555555554in"}
+> ![](media/image96.png)
+
 >
-> ![](media/image97.png){width="5.768055555555556in"
-> height="2.713888888888889in"}
+> ![](media/image97.png)
+
 
 5)  运行PLC程序，监控
 
-> ![](media/image98.png){width="5.768055555555556in"
-> height="2.5722222222222224in"}
+> ![](media/image98.png)
+
