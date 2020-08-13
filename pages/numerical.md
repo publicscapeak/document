@@ -34,7 +34,7 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 
 如840Dsl、828D的网口通讯设备，只需要将设备和Edge模块连接到同一个局域网内，即可实现数据通讯。
 
-![](media/image3.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image3.png" width="80%"/>
 
 
 1.  固定设备IP地址
@@ -43,7 +43,7 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 
 注意，一般设备修改完IP地址，都需要重新启动设备才能够生效。
 
-![](media/image4.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image4.png" width="80%"/>
 
 2.  按照上述网络架构，将设备和Edge模块连接至同一局域网内。
 
@@ -54,7 +54,7 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 
 如840D、810D的串口通讯设备，需要用到SCANET6-NCU工业以太网通讯处理模块，将设备的串口转换为网口，再将SCANET和Edge连接到同一个局域网内，即可实现通讯。
 
-![](media/image5.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image5.png" width="80%"/>
 
 
 1.  安装SCANET模块到机床的MPI通讯接口。注意安装时候需要设备整体断电进行操作。
@@ -64,7 +64,7 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 >
 > 若设备MPI接口已经被占用，可将原先的通讯线拔下，按上述方法先安装SCANET模块，再将原来的通讯先接到SCANET的扩展总线接口上。
 
-![](media/image6.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image6.png" width="80%"/>
 
 2.  按照上述网络架构，将SCANET和Edge模块连接至同一个局域网内。
 
@@ -74,19 +74,19 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 
 -   确认S7总线状态为，当前波特率稳定，并能够检测到设备主从站地址。
 
-![](media/image7.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image7.png" width="80%"/>
 
 
 -   S7通讯协议模式一般为MPI主从站，S7总线波特率建议根据上述检测到的波特率设置为固定值。
 
-![](media/image8.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image8.png" width="80%"/>
 
 
 -   此处可以修改SCANET模块的IP地址、子网掩码、默认网关。
 
 -   通讯目标PLC地址由槽号决定：该参数一般改成"是"。
 
-![](media/image9.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image9.png" width="80%"/>
 
 
 5.  确保Edge和SCANET网络通讯正常，使用EdgePlant软件，修改通讯参数和软件配置文件。详见本手册第三章。
@@ -97,12 +97,12 @@ EdgePlant配置
 查看配置
 --------
 
-![](media/image10.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image10.png" width="80%"/>
 
 
 将电脑网卡和Edge模块的任意网口连接，运行EdgePlant软件。根据所使用的网卡，搜索并连接到Edge模块。选择"应用软件"，选择"数据采集"，打开MDC_OPCUA_SERVER软件的配置。
 
-![](media/image11.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image11.png" width="80%"/>
 
 
 读取模块配置：读取Edge中现有配置文件
@@ -118,12 +118,12 @@ EdgePlant配置
 
 ### 程序开机自启
 
-![](media/image12.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image12.png" width="80%"/>
 
 
 在"系统设置/软件管理/数据采集"菜单下，找到"MDC_OPCUA_SERVER"软件，复制"文件路径"，打开"开机启动"菜单。
 
-![](media/image13.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image13.png" width="80%"/>
 
 
 新建配置，自定义"软件名称"，将上述复制的"文件路径"粘贴到"软件路径"，设置启动延时，通常为"1000毫秒"，最后下载配置。
@@ -133,7 +133,7 @@ SERVER程序都会自动运行。
 
 ### 程序重启
 
-![](media/image14.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image14.png" width="80%"/>
 
 
 选择"系统设置/系统信息/系统/进程列表"，在进程列表下找到"MDC_OPCUA_SERVER"进程，双击打开进程，可以选择"重启进程"或"终止进程"。
@@ -145,11 +145,11 @@ SERVER程序都会自动运行。
 
 1.  在默认项目下，右键新建一个组别。
 
-![](media/image15.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image15.png" width="80%"/>
 
 2.  在设备组下，右键新建一个连接。
 
-![](media/image16.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image16.png" width="80%"/>
 
 
 3.  选择"SINUMERIK.TCP客户端"驱动，此驱动专用于西门子数控系统通讯。
@@ -174,11 +174,11 @@ SERVER程序都会自动运行。
 
 -   通讯间隔：根据所需的采集频率来设置，一般无需修改。采集频率同样受设备本身的通讯性能限制
 
-![](media/image17.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image17.png" width="80%"/>
 
 4.  选择新建的设备，右键新建一个标签。
 
-![](media/image18.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image18.png" width="80%"/>
 
 
 5.  标签属性如下
@@ -196,7 +196,7 @@ SERVER程序都会自动运行。
 -   地址选择：选择一个西门子NC变量进行读取。详细变量说明参考《第4章
     变量配置说明》
 
-![](media/image19.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image19.png" width="80%"/>
 
 
 查看数据
@@ -206,13 +206,13 @@ EdgePlant配置软件自带OPCUA Client功能，可以查看当前正在读取�
 
 在"应用软件/数据采集"页面下，选择右上角"客户端测试"，打开OPCUA客户端。
 
-![](media/image20.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image20.png" width="80%"/>
 
 
 选择默认搜索到的OPCUA
 SERVER连接，在左侧列表中选择需要监控的变量节点，即可查看当前读取的变量值。打开"订阅"功能，可以持续刷新最新读取的数值。
 
-![](media/image21.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image21.png" width="80%"/>
 
 
 故障诊断
@@ -222,7 +222,7 @@ EdgePlant可以查看程序运行信息。若数据读取异常，可以通过�
 
 在"系统设置/软件管理"的软件列表中，找到使用的"OPCUA_SinumerikTcpClient"驱动，在右侧"软件信息"菜单中，将"日志级别"修改为"调试"。打开"运行日志"查看软件运行信息。若无法判断错误原因，可将此运行日志复制出来，连同软件配置文件一同发送至凌顶，获取技术支持。
 
-![](media/image22.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image22.png" width="80%"/>
 
 变量配置说明
 ============
@@ -238,7 +238,7 @@ EdgePlant可以查看程序运行信息。若数据读取异常，可以通过�
 
 1.标签区域；2.模块；3.变量/列号；4.行号
 
-![](media/image23.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image23.png" width="80%"/>
 
 
 ### 变量区域
@@ -294,16 +294,16 @@ NC变量通常可以分为三种：
 
 1.  在凌顶提供的《Siemens数控常用变量配置手册》中，找到需要采集的变量。
 
-![](media/image24.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image24.png" width="80%"/>
 
 2.  根据"区域、模块、列号、行号"这四个参数，在EdgePlant软件中新建变量。手册中已给出对应变量的列号，可直接在参数中输入列号。
 
-![](media/image25.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image25.png" width="80%"/>
 
 
 3.  手册中的"读写"参数为"r"表示该变量只读不可写，参数为"rw"表示该变量可读可写。根据变量属性选择"写值使能"，选择"是"则可以在OPCUA客户端中做数据反写。
 
-![](media/image26.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image26.png" width="80%"/>
 
 
 4.  变量全部添加完成，下载配置文件，重启MDC_OPCUA_SERVER程序。详细步骤参考本手册《3.2
@@ -315,7 +315,7 @@ NC变量通常可以分为三种：
 
 若凌顶提供的变量手册中，没有所需要的变量，则需要到西门子官方手册《Siemens变量和接口信号》中查找。
 
-![](media/image27.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image27.png" width="80%"/>
 
 
 1.  在手册中找到需要读取的变量。确定区域和模块。
@@ -326,7 +326,7 @@ NC变量通常可以分为三种：
 
 4.  查看变量是否支持多行号。
 
-![](media/image28.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image28.png" width="80%"/>
 
 
 根据上面查找到的变量属性，在EdgePlant软件中配置变量。注意由于从西门子手册中查找的变量无法确定其"列号"，需要在配置软件中的"变量"列表中去根据变量名称手动选择。
@@ -338,24 +338,24 @@ NC变量通常可以分为三种：
 
 例1：MCS机床坐标
 
-![](media/image29.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image29.png" width="80%"/>
 
 
 按照手册中查找到的参数配置如下变量。由于该变量为多行NC变量类型，因此可以改变行号来读取不同轴的MCS机床坐标值。
 
 行号为1，代表1号轴；行号为2，代表2号轴；以此类推。
 
-![](media/image30.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image30.png" width="80%"/>
 
 
 例2：轴负载率
 
-![](media/image31.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image31.png" width="80%"/>
 
 
 按照手册中查找到的参数配置如下变量。由于该变量为多行NC变量类型，因此可以改变行号来读取不同轴的负载率。
 
-![](media/image32.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image32.png" width="80%"/>
 
 
 ### 刀具相关变量
@@ -366,25 +366,25 @@ NC变量通常可以分为三种：
 
 1.  首先读取系统中的刀具数量。
 
-![](media/image33.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image33.png" width="80%"/>
 
 
 2.  接着读取刀具标识符（刀具名称）、刀具编号（内部编号）。上面读取的刀具数量可以指定以下两个参数的最大行号。相同行号读取的刀具名称和内部编号，对应的是同一把刀具。根据刀具名称，确定需要读取的刀具的内部编号。
 
 > 例如：刀具名称为107的刀具，其内部编号对应为77。
 
-![](media/image34.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image34.png" width="80%"/>
 
 3.  根据上述读到的内部编号，指定需要读取的刀具的列号。此处的行号4，固定代表刀具剩余加工件数变量。
 
 > 例如：要读取107号刀具的剩余加工件数，则指定这边的列号为77，行号为4。
 
-![](media/image35.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image35.png" width="80%"/>
 
 
 4.  一般根据手册中配置的变量，都是刀具1号刀沿的数据。如果需要读取刀具2号刀沿数据，需要先读取以下变量，得知当前系统为每把刀具定义了多少个刀具寿命类型的数据。
 
-![](media/image36.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image36.png" width="80%"/>
 
 
 5.  假设以上变量读取值为9，那么当前系统中没把刀具定义了9个刀具寿命类型数据。若要读取2号刀沿的"剩余工件数"变量，需要指定变量的列号为77，行号为（2-1）\*9+4=13，即用公式"（刀沿号-1）\*9 +

@@ -44,7 +44,7 @@ Edge模块内部默认安装了MYSQL/MariaDB数据库实例。数据库文件也
 应用架构
 --------
 
-![](media/image2.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image2.png" width="80%"/>
 
 
 配置架构
@@ -68,7 +68,7 @@ XML配置文件格式
 
 Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设备的变量配置到opcua服务器中。配置文件的框架格式如下图：
 
-![](media/image3.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image3.png" width="80%"/>
 
 
 说明：
@@ -95,7 +95,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 定时记录表的Table格式
 ---------------------
 
-![](media/image4.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image4.png" width="80%"/>
 
 
 解释：
@@ -122,11 +122,11 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 
 -   请注意到Id字段的FieldType的定义，不局限于INT、VARCHAR、FLOAT之类的简单类型，任何MYSQL的CREATE语句能识别的字段定义都可以。软件对这张表生成的CREATE创建语句为：
 
-![](media/image5.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image5.png" width="80%"/>
 
 -   软件生成的插入语句，假设读取到的Project_Default.Group1.S7-300.MW0变量值为100，则INSERT语句为：
 
-![](media/image6.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image6.png" width="80%"/>
 
 
 -   对于Id字段，因为定义了DataSource=\"DataFormat\"，因此软件将DataFormat属性的内容作为字段的值，因为插入记录时自增字段的值应为NULL，因此设置了DataFormat=\"NULL\"。
@@ -136,7 +136,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 实时更新表的Table格式
 ---------------------
 
-![](media/image7.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image7.png" width="80%"/>
 
 
 解释：
@@ -163,17 +163,17 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 
 -   时间字段的定义需要采用通用格式来处理，DATETIME不是关键词。如下：
 
-![](media/image8.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image8.png" width="80%"/>
 
 
 -   软件生成的更新语句，假设读取到的Project_Default.Group1.S7-300.MW0变量值为100，则UPDATE语句为：
 
-![](media/image9.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image9.png" width="80%"/>
 
 事件记录表的Table格式
 ---------------------
 
-![](media/image10.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image10.png" width="80%"/>
 
 解释：
 
@@ -206,7 +206,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 
 -   事件记录表的多个事件的例子：
 
-![](media/image11.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image11.png" width="80%"/>
 
 -   示例：table4
 
@@ -217,7 +217,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 
 -   定义多张表实现不同事件时插入不同数据源的例子：
 
-![](media/image12.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/>
 
 
 解释：
@@ -242,56 +242,56 @@ Field节点定义一个字段，一张表中可以定义多个Field字段，没�
 
 -   Id自增字段（自增字段必须设置为主键）
 
-![](media/image13.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image13.png" width="80%"/>
 
 
 -   当前时间字段
 
-![](media/image14.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image14.png" width="80%"/>
 
 
 -   固定值字段
 
 整数固定值：
 
-![](media/image15.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image15.png" width="80%"/>
 
 
 字符串固定值：
 
-![](media/image16.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image16.png" width="80%"/>
 
 
 -   关联到事件文本的字符串字段
 
-![](media/image17.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image17.png" width="80%"/>
 
 
 -   OPCUA变量字段
 
 将OPCUA整数变量值填充到整数字段，MW2为整数：
 
-![](media/image18.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image18.png" width="80%"/>
 
 
 将OPCUA浮点数变量值填充到单精度字段（格式化为3位小数），MD100为浮点数：
 
-![](media/image19.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image19.png" width="80%"/>
 
 
 将OPCUA整数变量值填充到字符串字段，%d前后加单引号：
 
-![](media/image20.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image20.png" width="80%"/>
 
 
 将OPCUA整数变量值转换为16进制数值填充到字符串字段：
 
-![](media/image21.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image21.png" width="80%"/>
 
 
 将OPCUA字符串变量值填充到字符串字段，OrderCode为字符串：
 
-![](media/image22.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image22.png" width="80%"/>
 
 
 Filed字段的ListValue格式（列表格式）
@@ -299,7 +299,7 @@ Filed字段的ListValue格式（列表格式）
 
 Field节点下可以创建多个列表，列表是根据一个OPCUA变量的取值范围来决定字段的内容。
 
-![](media/image23.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/>
 
 解释：
 
@@ -319,7 +319,7 @@ DataRange的格式：\~右侧数据为最大值，\~左侧数据为最小值，�
 
 -   ListValue节点的数据源数值DataSource的解析规则和Filed字段是一致的。即如果DataSource为DataFormat，则直接取DataFormat的值，如果DataSource为OpcUaServer，则取ItemNode的值。如下示例：
 
-![](media/image24.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>
 
 
 如上配置将湿度Humidity变量引入了ListValue的数据源，在报告温度信息时记录了湿度数据。
@@ -347,13 +347,13 @@ EdgePlant配置
 查看配置
 --------
 
-![](media/image25.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image25.png" width="80%"/>
 
 
 运行EdgePlant软件，根据所使用的网卡，搜索并连接到模块；选择"应用软件"；选择"数据存储"，打开MES
 DATA SERVER软件的配置。
 
-![](media/image26.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image26.png" width="80%"/>
 
 
 读取模块配置：读取Edge中现有配置文件
@@ -369,13 +369,13 @@ DATA SERVER软件的配置。
 
 ### 程序开机自启
 
-![](media/image27.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image27.png" width="80%"/>
 
 
 在"系统设置/软件管理/数据储存"菜单下，找到"MES DATA
 SERVER"软件，复制"文件路径"，打开"开机启动"菜单。
 
-![](media/image28.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image28.png" width="80%"/>
 
 
 新建配置，自定义"软件名称"，将上述复制的"文件路径"粘贴到"软件路径"，设置启动延时，通常为"1000毫秒"，最后下载配置。
@@ -385,7 +385,7 @@ SERVER程序都会自动运行。
 
 ### 程序重启
 
-![](media/image29.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image29.png" width="80%"/>
 
 
 选择"系统设置/系统信息/系统/进程列表"，在进程列表下找到"MES_DATA_SERVER"进程，双击打开进程，可以选择"重启进程"或"终止进程"。
@@ -398,13 +398,13 @@ SERVER程序都会自动运行。
 数据源定义用于指定整个配置文件的外部数据源，可以定义多个OPCUA
 SERVER连接。（Mes.Data.Server从外部数据源获取数据并插入到指定的表单中）
 
-![](media/image30.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image30.png" width="80%"/>
 
 右键"数据源定义"，添加OPCUA服务器。自定义"服务器名称"，终结点格式为"opc.tcp://ip地址:端口号"，如果使用Edge的内置OPCUA服务器，终结点中的IP地址，需要设置为当前电脑所连接Edge模块的网口IP地址。
 
 Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电脑通过Edge的Eth0连接，终结点设置为"opc.tcp://192.168.10.118:4840"。
 
-![](media/image31.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image31.png" width="80%"/>
 
 
 数据库服务器连接
@@ -416,7 +416,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 右键添加数据库服务器连接。"服务器IP"为数据库实例所在的远程计算机的IP地址，注意通过网络访问需要开启3306端口。指定一个能够远程访问，并拥有足够数据库操作权限的账号密码，用于连接远程数据库。
 
-![](media/image32.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image32.png" width="80%"/>
 
 
 ### 数据库配置
@@ -425,7 +425,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 程序运行首先会执行"自动删除"，再执行"自动创建"。因此，如果不想要删除原来的数据库，则避免多个数据库名称重复，或者指定"自动删除"为"否"。"自动创建"必须设置为"是"。在数据库服务器连接下，可以定义多个数据库。如果需要，可以将多张表划分到不同的数据库中。
 
-![](media/image33.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image33.png" width="80%"/>
 
 
 ### 数据表配置
@@ -438,7 +438,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 -   **事件记录表**：事件触发记录表，每间隔一定时间就依次检查一遍每个事件是否满足，如果该事件满足则插入一条记录。用于当某事件发生时插入一条信息，如报警信息和产线动作记录。
 
-![](media/image34.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image34.png" width="80%"/>
 
 指定"自动创建"，如果数据表不存在是否自动创建。指定"自动删除"，如果数据表已存在，则是否先删除。处理逻辑和数据库一样。
 
@@ -450,7 +450,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 可以选中字段上下移动，调整数据表格式。
 
-![](media/image35.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image35.png" width="80%"/>
 
 
 -   字段名称、字段别名：即数据表中的字段名称和注释。
@@ -470,24 +470,24 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 用于从OPCUA服务器读取一个变量值，并转换成需要的数据类型写入数据库。
 
-![](media/image36.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image36.png" width="80%"/>
 
 
 打开"OPCUA标签选择"对话框，选择"已配置的数据源"，在"节点空间浏览"中选择需要链接的节点。
 
-![](media/image37.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image37.png" width="80%"/>
 
 
-![](media/image38.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image38.png" width="80%"/>
 
 ### 列表值字段
 
-![](media/image39.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image39.png" width="80%"/>
 
 
 该字段仅当"数据格式符"为"ListValue"时才允许定义。其余配置和OPC标签值字段配置相同。
 
-![](media/image40.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image40.png" width="80%"/>
 
 
 列表值字段用于配置列表属性。
@@ -504,7 +504,7 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 ### 事件节点
 
-![](media/image41.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image41.png" width="80%"/>
 
 
 事件记录表中可以配置多个Event节点，每个Event节点定义一个发生的事件。一个表内可以定义多个Event节点，这些Event节点将被单独扫描处理，每个满足触发条件的Event都将引起插入一条完整的记录。。
@@ -519,7 +519,7 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 只有在事件记录表中可以创建该字段。
 
-![](media/image42.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image42.png" width="80%"/>
 
 
 将触发事件的文本填充到这个字段：即将上述"EVENT事件节点"中定义的"事件关联文本"，填充到字段中。这样，对于不同的事件就可以记录不同的内容，譬如记录所有报警的表或者设备的所有动作。
@@ -528,57 +528,57 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 -   自增主键字段（自增字段必须设置为主键）
 
-![](media/image43.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image43.png" width="80%"/>
 
 -   日期时间字段
 
-![](media/image44.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image44.png" width="80%"/>
 
 
 -   固定数值字段
 
-![](media/image45.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image45.png" width="80%"/>
 
 -   固定字符串字段
 
-![](media/image46.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image46.png" width="80%"/>
 
 -   OPC标签值字段
 
 将OPCUA整数变量值填充到整数字段：
 
-![](media/image47.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image47.png" width="80%"/>
 
 将OPCUA浮点数变量值填充到单精度字段（格式化为3位小数）：
 
-![](media/image48.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image48.png" width="80%"/>
 
 
 将OPCUA整数变量值填充到字符串字段，%d前后加单引号：
 
-![](media/image49.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image49.png" width="80%"/>
 
 
 将OPCUA整数变量值转换为16进制数值填充到字符串字段：
 
-![](media/image50.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image50.png" width="80%"/>
 
 
 将OPCUA字符串变量值填充到字符串字段，%s前后加单引号：
 
-![](media/image51.png)}
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image51.png" width="80%"/>
 
 -   列表值字段
 
 例：当OPCUA变量值为1，该字段写入"列表值=1"；当OPCUA变量大于2，该字段写入"列表值=2"。
 
-![](media/image52.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image52.png" width="80%"/>
 
 
-![](media/image53.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image53.png" width="80%"/>
 
 
-![](media/image54.png)
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image54.png" width="80%"/>
 
 
 配置注意事项
