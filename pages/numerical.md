@@ -64,7 +64,7 @@ OPCUA服务器的采集变量数量没有任何限制，其所支持的设备连
 >
 > 若设备MPI接口已经被占用，可将原先的通讯线拔下，按上述方法先安装SCANET模块，再将原来的通讯先接到SCANET的扩展总线接口上。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image6.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image6.png" width="40%"/>
 
 2.  按照上述网络架构，将SCANET和Edge模块连接至同一个局域网内。
 
@@ -238,7 +238,7 @@ EdgePlant可以查看程序运行信息。若数据读取异常，可以通过�
 
 1.标签区域；2.模块；3.变量/列号；4.行号
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image23.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image23.png" width="40%"/>
 
 
 ### 变量区域
@@ -298,7 +298,7 @@ NC变量通常可以分为三种：
 
 2.  根据"区域、模块、列号、行号"这四个参数，在EdgePlant软件中新建变量。手册中已给出对应变量的列号，可直接在参数中输入列号。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image25.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image25.png" width="40%"/>
 
 
 3.  手册中的"读写"参数为"r"表示该变量只读不可写，参数为"rw"表示该变量可读可写。根据变量属性选择"写值使能"，选择"是"则可以在OPCUA客户端中做数据反写。
@@ -326,7 +326,7 @@ NC变量通常可以分为三种：
 
 4.  查看变量是否支持多行号。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image28.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image28.png" width="40%"/>
 
 
 根据上面查找到的变量属性，在EdgePlant软件中配置变量。注意由于从西门子手册中查找的变量无法确定其"列号"，需要在配置软件中的"变量"列表中去根据变量名称手动选择。
@@ -345,7 +345,7 @@ NC变量通常可以分为三种：
 
 行号为1，代表1号轴；行号为2，代表2号轴；以此类推。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image30.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image30.png" width="40%"/>
 
 
 例2：轴负载率
@@ -355,7 +355,7 @@ NC变量通常可以分为三种：
 
 按照手册中查找到的参数配置如下变量。由于该变量为多行NC变量类型，因此可以改变行号来读取不同轴的负载率。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image32.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image32.png" width="40%"/>
 
 
 ### 刀具相关变量

@@ -128,25 +128,26 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 其中，Edge有两个网口，分别为Eth0和Eth1，这两个网口的可由用户设置IP地址，但是不能设置为同一网段。如果像图2-1一样连接，则PLC需要和Eth0在同一网段；计算机需要和Eth1在同一网段。例如：根据PLC的IP地址和计算机IP地址修改Edge的网口配置。
 
+ ``` 
   设备       网口                 网口
   ---------- -------------------- --------------------
   PLC        192.168.215.1        
   计算机                          192.168.1.200
   EdgePLUS   Eth0:192.168.215.2   Eth1:192.168.1.118
-
+```
 >  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image7.png" width="30%"/>
 
 
 2.  PLC有网口，使用交换机连接
 
 > 如果您用交换机连接硬件，Edge只使用一个网口例如：Eth1,可以如下图所示进行连接。IP地址配置如下：
-
+```
   设备       网口                  网口
   ---------- --------------------- --------------------
   PLC                              192.168.1.201
   计算机                           192.168.1.200
   EdgePLUS   Eth0:任意（不使用）   Eth1:192.168.1.118
-
+```
 > 硬件连接：
 >
 >  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image8.png" width="80%"/>
@@ -302,7 +303,7 @@ f)  以太网服务器模块诊断：可查看有几个上位机与PLC通讯。
 如果配置文件中有组别不想使用，您可以右击该组别，选择删除，也可以组别启用选择否。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image25.png" width="80%"/>
-height="0.9902777777777778in"}
+
 
 3.  新建连接，右击该组别（siemens），新建一个连接
 
@@ -390,7 +391,7 @@ height="0.9902777777777778in"}
 
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image39.png" width="80%"/>
-height="2.598611111111111in"}
+
 
 2.  提示完成。
 
@@ -406,10 +407,10 @@ height="2.598611111111111in"}
 > 修改配置变量之后也需要重启进程。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image41.png" width="80%"/>
-height="2.967361111111111in"}
+
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image42.png" width="80%"/>
-height="2.6694444444444443in"}
+
 
 2.  如果您在进程列表中没有看到MDC_OPCUA_SERVER的进程，您需要将MDC_OPCUA_SERVER加入开机启动中。
 
@@ -451,10 +452,10 @@ height="2.6694444444444443in"}
 -   点击订阅，数据会实时刷新。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image48.png" width="80%"/>
-height="2.0833333333333335in"}
+
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image49.png" width="80%"/>
-height="3.316666666666667in"}
+
 
 2.  写入：配置变量选择写值使能为是的变量可以写入。例如变量：MB100有符号8位整数，写值使能:是
 
@@ -476,10 +477,10 @@ height="3.316666666666667in"}
 
 4.1 S7-1200数据区域（通用数据区域）说明
 ---------------------------------------
-
+```
   变量区域   变量类型            变量地址     读写               说明
-  ---------- ------------------- ------------ ------------------ -------------------------------------------------------------------------------------------------------
-  I区        位值                I0.0         可读，部分不可写   可读，I区是输入区，在物理影像区，不能写。
+  -------- ------------------- ------------ ------------------ -------------------------------------------------------------------------------------------------------
+  I区        位值                I0.0        可读，部分不可写    可读，I区是输入区，在物理影像区，不能写。
              有/无符号8位整数    IB0                             
              有/无符号16位整数   IW0                             
              有/无符号32位整数   ID0                             
@@ -507,34 +508,34 @@ height="3.316666666666667in"}
              单精度浮点数        DB3.DBD0                        
              字符串              DB3.DBB0:1                      
              字节数组            DB3.DBB0:1                      
-
+```
 注意：字符串类型和字节数组类型虽然每个区域都可以选择该类型，但是不太常用。例如，DB10中存放了String类型的数据,占用255个字节。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image53.png" width="80%"/>
-height="1.611398731408574in"}
+
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image54.png" width="80%"/>
-height="2.2847222222222223in"}
+
 
 -   字节数组类型：字节数组代表一块数据，不是一个变量，是一块数据，读一块数据区。如从DB10.DBB0到DB10.DBB200。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image55.png" width="80%"/>
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image56.png" width="80%"/>
-height="1.3395833333333333in"}
+
 
 -   字符串类型：例如DB10中存放了String类型的数据'HELLO,SCAPEAK!',字符串类型，写值使能：是。
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image57.png" width="80%"/>
-height="4.633333333333334in"}
+
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image58.png" width="80%"/>
-height="1.4152777777777779in"}
+
 
 > 修改该值
 
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image59.png" width="80%"/>
-height="1.1513888888888888in"}
+
 
 4.2 S7-200数据区域说明（除通用数据区域之外）
 --------------------------------------------
@@ -543,10 +544,10 @@ height="1.1513888888888888in"}
 >
 >  <img src="https://help.blob.core.chinacloudapi.cn/helppic/plc/image60.png" width="80%"/>
 
-
+```
   变量区域   变量类型            变量地址     读写           说明
-  ---------- ------------------- ------------ -------------- --------------------------------------------------------------------------------
-  VB区域     位值                DB1.DBX0.0   可读，可写     被PLC程序控制的DB区域，写入后会被程序刷新。再次读取仍会读取PLC程序赋予的新值。
+  --------  ------------------ ------------ ------------- --------------------------------------------------------------------------------
+  VB区域     位值               DB1.DBX0.0    可读，可写     被PLC程序控制的DB区域，写入后会被程序刷新。再次读取仍会读取PLC程序赋予的新值。
              有/无符号8位整数    DB1.DBB0                    
              有/无符号16位整数   DB1.DBW0                    
              有/无符号32位整数   DB1.DBD0                    
@@ -571,7 +572,7 @@ height="1.1513888888888888in"}
              有/无符号16位整数   C0计数值                    
   T区        位值                T33          可读，不可写   定时器由程序控制，不能修改位值。
              有/无符号32位整数   T33                         
-
+```
 第5章 PLC基本配置
 =================
 

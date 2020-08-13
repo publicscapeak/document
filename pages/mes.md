@@ -68,7 +68,7 @@ XML配置文件格式
 
 Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设备的变量配置到opcua服务器中。配置文件的框架格式如下图：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image3.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image3.png" width="100%"/>
 
 
 说明：
@@ -95,7 +95,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 定时记录表的Table格式
 ---------------------
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image4.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image4.png" width="100%"/>
 
 
 解释：
@@ -113,20 +113,20 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 每间隔1000毫秒处理所有的字段的值，即读取OPCUA服务器的MW0变量数据并插入一条记录。ItemNode由\"OPCUA服务器名称\|OPCUA变量名\"格式组成。
 
 -   示例：table1
-
+```
   id   value
   ---- -------
   1    100
   2    101
   3    102
-
+```
 -   请注意到Id字段的FieldType的定义，不局限于INT、VARCHAR、FLOAT之类的简单类型，任何MYSQL的CREATE语句能识别的字段定义都可以。软件对这张表生成的CREATE创建语句为：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image5.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image5.png" width="100%"/>
 
 -   软件生成的插入语句，假设读取到的Project_Default.Group1.S7-300.MW0变量值为100，则INSERT语句为：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image6.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image6.png" width="40%"/>
 
 
 -   对于Id字段，因为定义了DataSource=\"DataFormat\"，因此软件将DataFormat属性的内容作为字段的值，因为插入记录时自增字段的值应为NULL，因此设置了DataFormat=\"NULL\"。
@@ -136,7 +136,7 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 实时更新表的Table格式
 ---------------------
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image7.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image7.png" width="100%"/>
 
 
 解释：
@@ -154,11 +154,11 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 > 后续每间隔1000毫秒处理所有字段的值，即读取OPCUA服务器的MW0变量数据并更新唯一的一条记录。
 
 -   示例：table2
-
+```
   DT                        Value
   ------------------------- -------
   2020-01-01 12:00:00.234   100
-
+```
 -   请注意DT字段的FieldType的定义，DateTime(3)和DateTime是FieldType的关键词，大小写敏感，前者是带有毫秒的时间格式，Edge模块内部是支持毫秒格式的，如果是网络上的数据库，需要检查是否支持毫秒格式。如果FieldType被定义为DateTime(3)或者DateTime则软件直接解释为时间字段，不会理会有没有DataFormat、DataSource和ItemNode的定义。
 
 -   时间字段的定义需要采用通用格式来处理，DATETIME不是关键词。如下：
@@ -168,12 +168,12 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 
 -   软件生成的更新语句，假设读取到的Project_Default.Group1.S7-300.MW0变量值为100，则UPDATE语句为：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image9.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image9.png" width="40%"/>
 
 事件记录表的Table格式
 ---------------------
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image10.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image10.png" width="100%"/>
 
 解释：
 
@@ -196,28 +196,28 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 -   注意Alarm字段，DataSource设置为\"EventText\"，即把当前触发事件所定义的EventText，在本例中为\"Q0.0上升沿\"，按照DataFormat的内容进行格式化后作为Alarm字段的值。因为Alarm字段为字符串，因此DataFormat的格式符中的%s前后要加单引号。
 
 -   示例：table3
-
+```
   DT                        Value   Alarm
   ------------------------- ------- ------------
   2020-01-01 12:00:00.234   100     Q0.0上升沿
   2020-01-01 12:01:00.234   103     Q0.0上升沿
-
+```
 注：Q0.0变量因为定义了Action=\"Reset\"，因此会被软件在插入记录后自动复位。
 
 -   事件记录表的多个事件的例子：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image11.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image11.png" width="100%"/>
 
 -   示例：table4
-
+```
   DT                        Value   Alarm
   ------------------------- ------- ------------
   2020-01-01 12:00:00.234   100     Q0.0上升沿
   2020-01-01 12:01:00.234   103     Q0.1上升沿
-
+```
 -   定义多张表实现不同事件时插入不同数据源的例子：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="100%"/>
 
 
 解释：
@@ -225,12 +225,12 @@ Mes.Data.Server需要从opcua服务器中获取数据，因此首先需要将设
 -   以上定义了两个同名的表，都是table5，并且其字段定义的FieldType也是一致的。区别在于前面的表定义了Q0.0的上升沿，后面的表定义了Q0.1的上升沿。当Q0.0上升沿时软件处理上面的表，将MW0的值插入到Value字段；当Q0.1上升沿时软件处理下面的表，将MW2的值插入到Value字段。
 
 -   示例：table5
-
+```
   DT                        Value   Alarm
   ------------------------- ------- ------------
   2020-01-01 12:00:00.234   100     Q0.0上升沿
   2020-01-01 12:01:00.234   103     Q0.1上升沿
-
+```
 注意：Value为100是MW0的值，Value为103是MW2的值。
 
 同名表多次定义的规则：需保证同名表的字段类型一致。对表的类型和字段的数据源没有限制，即可以混合定时记录表和事件记录表。
@@ -299,7 +299,7 @@ Filed字段的ListValue格式（列表格式）
 
 Field节点下可以创建多个列表，列表是根据一个OPCUA变量的取值范围来决定字段的内容。
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="100%"/>
 
 解释：
 
@@ -319,7 +319,7 @@ DataRange的格式：\~右侧数据为最大值，\~左侧数据为最小值，�
 
 -   ListValue节点的数据源数值DataSource的解析规则和Filed字段是一致的。即如果DataSource为DataFormat，则直接取DataFormat的值，如果DataSource为OpcUaServer，则取ItemNode的值。如下示例：
 
- <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>
+ <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="100%"/>
 
 
 如上配置将湿度Humidity变量引入了ListValue的数据源，在报告温度信息时记录了湿度数据。
@@ -458,14 +458,14 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 -   字段声明：不局限于INT、VARCHAR、FLOAT之类的简单类型，任何Mysql的CREATE语句能识别的字段定义都可以。
 
 -   数据格式符、字段数据源、OPCUA标签需要配合设置：
-
+```
   数据格式符                           字段数据源     OPCUA标签     说明
   ------------------------------------ -------------- ------------- -------------------------------------------------------------------------------
   NULL、NOW(3)、固定数值、固定字符串   数据格式符     空            注意固定字符串需要整体加单引号
   %d、%s、%.3f等转换说明符             OPCUA服务器    从OPCUA选择   若需要将OPC变量转换成字符串格式写入数据库，注意需要给数据格式符整体加上单引号
   ListValue                            OPCUA服务器    从OPCUA选择   需要创建列表以匹配从OPC变量读取的数值
   \'%s\'                               事件关联文本   空            只有在事件记录表中可以创建该字段。注意需要加引号
-
+```
 ### OPC标签值字段配置
 
 用于从OPCUA服务器读取一个变量值，并转换成需要的数据类型写入数据库。
