@@ -1,3 +1,3 @@
-# Headline
+# 帮助文档
 
-> An awesome project.
+> 欢迎您来到Edge帮助文档,点击左边导航栏选择您需要的帮助
