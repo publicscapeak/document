@@ -29,23 +29,23 @@
 
 > 取下三菱PLC串口扩展模块
 
-![C:\\Users\\BY\\AppData\\Local\\Temp\\1595986900(1).png](media/image2.png)
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image2.png" width="80%"/>
 
 
 > 观察串口扩展模块的连接标准
 
 FX3U-48MR的串口连接标准为【RS-232】
 
-![C:\\Users\\BY\\AppData\\Local\\Temp\\1595988696(1).png](media/image3.png)
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image3.png" width="80%"/>
 
 
 > 将通讯线与接线端子连接，并插入串口扩展模块中（如果是九针接线端子，接2，3，5口）
 
-![C:\\Users\\BY\\AppData\\Local\\Temp\\1595989497(1).png](media/image4.png)
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image5.jpeg" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image4.png" width="40%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image5.jpeg" width="40%"/>
 
 
-![C:\\Users\\BY\\AppData\\Local\\Temp\\1595989789(1).png](media/image6.png)
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image6.png" width="80%"/>
 
 
 > 根据EdgePLUS接线说明，通讯线连接EgdePLUS的接线端子，通讯线接线与PLC一一对应。
@@ -58,7 +58,7 @@ FX3U-48MR的串口连接标准为【RS-232】
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image8.jpeg" width="80%"/>
 
 
-![C:\\Users\\BY\\AppData\\Local\\Temp\\1595990566(1).png](media/image9.png)
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image9.png" width="80%"/>
 
 
 []{#_Hlk47441176 .anchor}硬件连接实物图如下图所示
