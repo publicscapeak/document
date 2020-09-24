@@ -1,6 +1,8 @@
-**数据库同步使用手册（syncDATA）**
+数据库同步使用手册（syncDATA）
+============
 
 一、设备连接
+----------------------
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image1.jpeg" width="80%"/>
 
@@ -9,6 +11,7 @@
 EdgePLUS通过网线分别连接PC和PLC，EdgePLUS通过USB接口连接PC通电。
 
 二、使用流程及相关配置
+----------------------
 
 1.首先进入网路配适器，如下图：
 
