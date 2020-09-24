@@ -99,7 +99,7 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
 * 依次点击**项目** **下载模块配置** ，即可将当前配置烧写进模块
      <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/屏幕截图(579).png" alt="屏幕截图(579)" style="zoom:75%;" />
 * 依次操作如图所示步骤，找到进程列表中的MDC_OPCUA_SERVER进程并鼠标左键双击，点击**重启进程**，待进程重启完成后本次配置生效
-      ![image-20200729171750016](https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729171750016.png)
+    <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729171750016.png" width="80%"/> 
   
 * 至此，EdgePLUS可通过MelsecUSB读写PLC中的D0。
 
