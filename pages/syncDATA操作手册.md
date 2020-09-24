@@ -38,7 +38,7 @@ EdgePLUS通过网线分别连接PC和PLC，EdgePLUS通过USB接口连接PC通电
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image5.png" width="80%"/>
  
 
-然后通过系统设置中的软件管理进行软件安装，这里需要安装的是下面的MES\_DATA\_SERVER（数据存储）和syncDATA\_MsSQL（数据同步）。（注意：syncDATA\_MsSQL的安装路径为/opt/scapeak/sync\_DATA\_MsSQL，MES\_DATA\_SERVER的安装路径为/opt/scapeak/MES\_DATA\_SERVER）。
+然后通过系统设置中的软件管理进行软件安装，这里需要安装的是下面的MES\_DATA\_SERVER（数据存储）和syncDATA\_MsSQL（数据同步）。（注意：syncDATA\_MsSQL的安装路径为/opt/scapeak/sync\_DATA\_MsSQL，M32ES\_DATA\_SERVER的安装路径为/opt/scapeak/MES\_DATA\_SERVER）。
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image6.png" width="80%"/>
  
