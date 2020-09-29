@@ -1,7 +1,7 @@
 EdgPLUS通过USB采集
 ================
 
-一、功能和应用：
+第一章、功能和应用
 ================
 
 > EdgePLUS有两路USB串口，可以通过USB对PLC设备进行数据采集。当USB接口不够用的时候可以通过连接USB扩展器对接口进行扩展。本案例使用USB扩展器扩展出的USB口对OMRON
@@ -10,16 +10,16 @@ EdgPLUS通过USB采集
 > <img src="https://help.blob.core.chinacloudapi.cn/helppic/omlusb/image1.jpg" width="80%"/>
 > 
 
-二、通讯线连接
+第二章、通讯线连接
 ==============
 
 > 注：USB扩展器连接的设备过多时，需要对USB扩展器进行外部供电操作。
 
-三、EdgePLUS配置
+第三章、EdgePLUS配置
 ================
 
-1. 驱动选择：
--------------
+3.1 驱动选择
+------------
 
 > a）点击“Project\_Default”，新建一个组别（组别名称可以自定义）
 >
@@ -38,7 +38,7 @@ EdgPLUS通过USB采集
 > <img src="https://help.blob.core.chinacloudapi.cn/helppic/omlusb/image4.png" width="80%"/>
 > 
 
-2. 变量配置：
+3.2 变量配置
 -------------
 
 > a）点击连接“Connection\_0”，添加驱动标签
@@ -59,7 +59,7 @@ EdgPLUS通过USB采集
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/omlusb/image8.png" width="80%"/>
 
 
-3. 查看数据：
+3.3 查看数据
 -------------
 
 > a）点击“客户端测试”——“连接”——“Connection\_0”，可查看采集到的数据是否与PLC中的值一致。
@@ -67,7 +67,7 @@ EdgPLUS通过USB采集
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/omlusb/image9.png" width="80%"/>
 
 
-四、PLC数据区采集说明：
+第四章、PLC数据区采集说明
 =======================
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/omlusb/image10.png" width="80%"/>

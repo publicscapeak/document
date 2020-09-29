@@ -4,42 +4,6 @@
 
 SCAEdge驱动使用手册\__Beta_
 ====
-|  适用| Mitusubishi FX/Q 、SIEMENS、Schneider、OMRON、发那科、光洋Koyo |
-| -------- | ------------------------ |
-| 发布者   | IIOT物联网部门          |
-| 发布日期 | Aug/2020    |
-| 发布版本 | V1.5                    |
-| 公司网址 | www.scapeak.com          |
-<div STYLE="page-break-after: always;"></div>
-
-[TOC]
-
-<div STYLE="page-break-after: always;"></div>
-
-引言
-===
-
-本手册为Edge模块的用户使用手册，介绍将Edge模块投入运行所需信息。Edge模块内部为嵌入式ARM-Linux系统，因此具备Linux相关知识将有助于更深入的使用Edge模块。
-Edge嵌入式软件的版本迭代和功能描述不会立即反映在本手册中，具体需求请垂询本公司服务热线400-8544-418。
-[引用]
-
-
-
-
-
-# 使用环境
-
-* 本手册陈述用例应满足如下配置
-
-| 操作系统 | Windows 7/8/8.1/10        |
-| -------- | -------------------------|
-| 应用软件 | EdgePlant                 |
-| 硬件     | PC、PLC、Power&Data Cable |
-
-<div STYLE="page-break-after: always;"></div>
-
-# 数据采集服务-MDC.OPCUA.SERVER
-
 # 1.FX系列
 ## 1)三菱PLC串口ProgSerial驱动
 ### 1、使用环境
@@ -102,9 +66,7 @@ FX3U-48MR的串口连接标准为【RS-232】
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image9.png" width="80%"/>
 
 
-[]{#_Hlk47441176 .anchor}硬件连接实物图如下图所示
-
-> []{#_Hlk47084454 .anchor}
+硬件连接实物图如下图所示
 > USB线插入Debug口与电脑连通，以太网线插入Eth0口（ip地址：192.168.10.118）与电脑连通
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image10.jpeg" width="80%"/>
