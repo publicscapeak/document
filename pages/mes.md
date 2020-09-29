@@ -1,8 +1,3 @@
-
-
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image1.png" width="80%"/>
-
-
 **Edge模块**
 ==========
 **MES DATA SERVER数据存储服务**

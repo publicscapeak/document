@@ -1,8 +1,3 @@
-
-
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/numerical/image2.png" width="80%"/>
-
-
 **Edge模块**
 ==========
 **SinumerikTcpClient西门子数控驱动**
