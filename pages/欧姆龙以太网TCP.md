@@ -31,7 +31,7 @@ EdgPLUS通过以太网采集
 > <img src="https://help.blob.core.chinacloudapi.cn/helppic/omltcp/image2.png" width="80%"/>
 > 
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/omltcp/image3.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/omltcp/image3.png" width="40%"/>
 > 
 
 **2. 驱动选择**：

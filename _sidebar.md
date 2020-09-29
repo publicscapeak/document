@@ -13,6 +13,10 @@
   * [FX3UUSB扩展卡通讯使用手册](pages/FX3UUSB扩展卡通讯使用手册.md)
   * [光洋触摸屏驱动操作手册](pages/光洋触摸屏驱动操作手册.md)
   * [光洋触摸屏软件使用](pages/光洋触摸屏软件使用.md)
+  * [数据交换服务测试](pages/数据交换服务测试.md)
+  * [EdgeSystem驱动测试](pages/EdgeSystem驱动测试.md)
+  * [Modbus串口驱动测试](pages/Modbus串口驱动测试.md)
+  * [ModbusTcp驱动测试](pages/ModbusTcp驱动测试.md)
 
 
   

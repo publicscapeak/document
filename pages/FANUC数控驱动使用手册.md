@@ -68,7 +68,7 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 例如：根据FANUC数控的IP地址和计算机IP地址修改Edge的网口配置，包括IP地址、默认网关和子网掩码。
 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image6.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image6.png" width="40%"/>
 
 > 
 > <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image7.png" width="80%"/>
@@ -91,7 +91,7 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 1.打开EdgePlant配置软件，在计算机网口的IP地址下搜索Edge模块。
 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image9.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image9.png" width="60%"/>
 }
 >
 > <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image10.png" width="80%"/>
@@ -104,7 +104,7 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 >
 > 注意：您还可以选择硬件断电重启，即给EdgePLUS断电重启。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image11.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image11.png" width="40%"/>
 
 > 
 
@@ -172,7 +172,7 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 >
 > (2)主区域包括：控制轴/主轴相关数据；程序相关数据；文件相关数据；刀具寿命管理数据；PMC可编程控制器数据区；系统相关数据。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image18.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image18.png" width="40%"/>
 
 > 
 >
@@ -180,37 +180,37 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 >
 > 1)控制轴/主轴相关数据
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image19.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image19.png" width="60%"/>
 
 > 
 >
 > 2)程序相关数据
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image20.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image20.png" width="60%"/>
 
 > 
 >
 > 3)文件相关数据
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image21.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image21.png" width="60%"/>
 
 > 
 >
 > 4)刀具寿命管理数据
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image22.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image22.png" width="60%"/>
 
 > 
 >
 > 5)PMC可编程控制器数据区
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image23.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image23.png" width="60%"/>
 
 > 
 >
 > 6)系统相关数据
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image24.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image24.png" width="60%"/>
 
 > 
 >
@@ -220,32 +220,32 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 >
 > 1)值可写表示该变量能读能写，值可写属性可修改为是，其余变量区域默认为否，并且不可修改（灰色不可修改）。对于发那科CNC来说，目前只有PMC可编程控制器数据区和文件相关参数的轴相关参数可读可写。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image25.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image25.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image26.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image26.png" width="60%"/>
 
 > 
 >
 > 2)数据类型：大部分数据区域的数据类型都是固定的，取决于该变量本身，不可修改（灰色不可修改）。只有少部分区域的数据可以选择变量类型。包括：文件相关数据的轴相关参数值；文件相关数据的轴相关设定值；PMC可编程控制器数据区；系统相关数据的轴相关诊断号（可选择8/16/32位整数或者32位浮点数）。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image27.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image27.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image28.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image28.png" width="60%"/>
 
 > 
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image29.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image29.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image30.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image30.png" width="60%"/>
 
 > 
 >
 > 对于PMC可编程控制器数据区如果指定位号，请选择数据类型为位值。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image31.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image31.png" width="60%"/>
 
 > 
 >
@@ -265,31 +265,31 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 6.测试过程中，为发那科CNC配置了如下变量。
 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image34.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image34.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image35.png" width="80%"/>
-
-> 
->
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image36.png" width="80%"/>
-
-> 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image37.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image35.png" width="60%"/>
 
 > 
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image38.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image36.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image39.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image37.png" width="60%"/>
 
 > 
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image40.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image38.png" width="60%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image41.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image39.png" width="60%"/>
+
+> 
+>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image40.png" width="60%"/>
+
+> 
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image41.png" width="60%"/>
 
 > 
 
@@ -344,10 +344,10 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 >
 > 2.然后重启EdgePLUS，您可以选择断电重启，也可以通过EdgePlant软件选择模块重启，如果重启成功，EdgePLUS的指示灯POW和SYS常亮。
 >
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image49.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image49.png" width="40%"/>
 
 > 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image50.jpeg" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image50.jpeg" width="40%"/>
 
 > 
 >
@@ -375,7 +375,7 @@ EdgePLUS可以使用24V直流电源供电，提供24V接线端子，或者使用
 
 2.写入：配置变量选择写值使能为是的变量可以写入。例如变量：C0无符号8位整数，值可写:是
 
-> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image54.png" width="80%"/>
+> <img src="https://help.blob.core.chinacloudapi.cn/helppic/fanuc/image54.png" width="40%"/>
 
 > 
 >
