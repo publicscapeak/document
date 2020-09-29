@@ -57,16 +57,13 @@ EdgePLUS的网口，一个连接设备，进行数据采集，一个连接电脑
 右击组别新建一个连接，选择“Modbus.Tcp客户端”驱动，“IP地址”填写连接设备的IP，“站点地址”对应ModSim上的“Device
 Id”。
 
-[]{#6082-1594088378440
-.anchor}<img src="https://help.blob.core.chinacloudapi.cn/helppic/modbustcp/image8.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/modbustcp/image8.png" width="80%"/>
 
 
-[]{#2383-1594088396027
-.anchor}<img src="https://help.blob.core.chinacloudapi.cn/helppic/modbustcp/image9.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/modbustcp/image9.png" width="80%"/>
 
 
-[]{#4332-1594088396027
-.anchor}右击连接新建一个标签，在右侧的“标签配置”栏可以修改“标签名称”、“标签别名”和“标签说明”，也可以选择是否启用标签。在“数据点位”栏里可以设置变量的数据类型和地址。
+右击连接新建一个标签，在右侧的“标签配置”栏可以修改“标签名称”、“标签别名”和“标签说明”，也可以选择是否启用标签。在“数据点位”栏里可以设置变量的数据类型和地址。
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/modbustcp/image10.png" width="80%"/> 
 

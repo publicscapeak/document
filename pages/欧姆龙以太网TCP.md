@@ -59,8 +59,8 @@ EdgPLUS通过以太网采集
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/omltcp/image7.png" width="80%"/> 
 
-> c）下载完成需要采集的变量配置之后，双击重启[]{#_Hlk47023967
-> .anchor}“MDC\_OPCUA\_SERVER”软件
+> c）下载完成需要采集的变量配置之后，双击重启
+> “MDC\_OPCUA\_SERVER”软件
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/omltcp/image8.png" width="80%"/> 
 
