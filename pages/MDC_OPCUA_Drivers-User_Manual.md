@@ -2,14 +2,14 @@
 
 ![image-20200729090535309](https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729090535309.png)
 
-SCAEdge驱动使用手册\__Beta_
+三菱系列驱动
 ====
 # 1.FX系列
 ## 1)三菱PLC串口ProgSerial驱动
 ### 1、使用环境
 
 
-本手册陈诉用例应满足如下配置
+本手册陈述用例应满足如下配置
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/slprog/image1.png" width="80%"/>
 
@@ -621,7 +621,7 @@ PLC数据区采集说明
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/slm3/image25.png" width="80%"/> 
 
 
-# 2.Q系列
+## 2.Q系列
 
 ### 如何开始1个新工程？
 
@@ -652,10 +652,14 @@ PLC数据区采集说明
     ![image-20200729101118992](https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729101118992.png)
 * 配置USB接口
 * 如图示，选择图示位置 _驱动参数_  _设备位置_  __功能按钮__
+
     ![image-20200729101416160](https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729101416160.png)
-* 点击 __更新__，展开列表，可显示当前已连接至EdgePLUS并识别的PLC
+
+* 点击 **更新**，展开列表，可显示当前已连接至EdgePLUS并识别的PLC
+
 * 点击图示 MITSUBISHI ，单击 **确定** ，即可自动适应并完成USB配置
      <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200729102040754.png" alt="image-20200729102040754" style="zoom: 67%;" />
+
 #### USB可扩展功能
 
 EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器，实现对多个PLC访问。
@@ -666,6 +670,7 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
 * 新建1个标签
 
     <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/屏幕截图(577).png" alt="屏幕截图(577)" style="zoom:67%;" />
+
 * 欲读取PLC中的D0，将_标签名称_手动输入为__D0__
 * 选择_数据类型_为__有符号16位整数__
 * 在弹出框中保持如图所示配置
@@ -689,10 +694,15 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
 #### 硬件连接及通讯参数配置
 
 * 硬件连接实物图
+
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200731141227762.png" alt="image-20200731141227762" style="zoom: 50%;" />
+
   * 本例使用了EdgePLUS的COM1（多模式串口）
+
 * PC通过GX Works2 对PLC编程的端口配置
+
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200731142232850.png" alt="image-20200731142232850" style="zoom:50%;" />
+
 * 使用EdgePLUS的COM1（多模式串口）采集PLC数据的端口配置参数应与上图一致。
 
 | Options    | Value      | Remark |
@@ -702,10 +712,10 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
 | 校验       | ODD        | 奇校验 |
 | 停止位       | 1        |        |
 
-
-
  <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200731141911032.png" alt="image-20200731141911032" style="zoom: 50%;" />
+
 * 配置Melsec4C驱动选择COM1
+
   <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200731141534425.png" alt="image-20200731141534425" style="zoom: 50%;" />
 
 
@@ -730,6 +740,7 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
 ###### 例1，PLC IP：192.168.1.101/24
 
 * 通讯参数
+
   * 本例PLC的以太网模块相关配置参数
 
   | Options  | Value            | Remark                           |
@@ -778,6 +789,7 @@ EdgePLUS的USB驱动支持USB集线器，因此用户可通过外接USB集线器
   | 打开方式 | MELSOFT连接       | 推荐设置                         |
   
   <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200813094226637.png" alt="image-20200813094226637" style="zoom:50%;" />
+
   <img src="https://help.blob.core.chinacloudapi.cn/helppic/scaedge/image-20200731160153843.png" alt="image-20200731160153843" style="zoom:50%;" />
   
   * EdgePLUS应保持的配置参数
