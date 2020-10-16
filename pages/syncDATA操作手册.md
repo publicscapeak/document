@@ -68,9 +68,9 @@ EdgePLUS通过网线分别连接PC和PLC，EdgePLUS通过USB接口连接PC通电
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image11.png" width="80%"/>
 
+然后进入应用软件修改上图1中的数据库同步软件配置，在2中SourceDb标签中设置源数据库的信息（要被同步的数据库）。    
+DbType：源数据库（默认MYSQL），DbName：数据库名称，User：默认为scaedge，Password：默认为scapeak，Host：默认为127.0.0.1，SyncMode：软件执行模式（insert（存储）或者update（更新）），Port：端口号，在DeatDb标签中设置目标数据库的信息（数据同步到的目标数据库）。DbType：：目标数据库（MYSQL或者MSSQL），DeleteOldTable：是否在启动时删除原来的表。
 
-
-然后进入应用软件修改上图1中的数据库同步软件配置，在2中SourceDb标签中设置源数据库的信息（要被同步的数据库），在DeatDb标签中设置目标数据库的信息（数据同步到的目标数据库）。
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image12.png" width="80%"/>
 
