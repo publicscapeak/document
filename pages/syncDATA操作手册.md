@@ -58,7 +58,7 @@ EdgePLUS通过网线分别连接PC和PLC，EdgePLUS通过USB接口连接PC通电
 
 
 
-然后再选择下图中的1进行MES\_DATA\_SERVER的配置，在2中进行数据库和数据表，还有数据表节点的创建。
+然后再选择下图中的1进行MES_DATA_SERVER的配置，在2中进行数据库和数据表，还有数据表节点的创建,注意：在创建节点时，要创建一个固定数值字段，名称为syncFlag，字段声明为INT，数据格式符为0，字段数据源为数据格式符。
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/syncdata/image10.png" width="80%"/>
 
