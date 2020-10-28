@@ -1,19 +1,10 @@
+
 **Edge模块**
 ==========
+
 **MES DATA SERVER数据存储服务**
 
 **用户手册**
-
-——无锡凌顶科技有限公司
-
-> 发布者：IIOT物联网部门
->
-> 发布日期：2020
->
-> 发布版本：V1.0
->
-> 公司网址：www.scapeak.com
-
 
 第1章 概述 
 ==========
@@ -42,7 +33,7 @@ MES.DATA.SERVER是一个数据存储服务软件，可根据配置文件自动�
 
 事件记录表：当数据发生变化时（事件发生）自动插入一条记录，用于记录报警事件或跟踪工艺设定数据变更；
 
-支持对定时记录表和事件记录表的记录数进行限制（先进先出）。
+> 支持对定时记录表和事件记录表的记录数进行限制（先进先出）。
 
 1.3 软件依赖项 
 --------------
@@ -119,7 +110,7 @@ SERVER程序都会自动运行。
 数据源定义用于指定整个配置文件的外部数据源，可以定义多个OPCUA
 SERVER连接。（Mes.Data.Server从外部数据源获取数据并插入到指定的表单中）
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image8.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image8.png" width="80%"/> 
 
 右键“数据源定义”，添加OPCUA服务器。自定义“服务器名称”，终结点格式为“opc.tcp://ip地址:端口号”，如果使用Edge的内置OPCUA服务器，终结点中的IP地址，需要设置为当前电脑所连接Edge模块的网口IP地址。
 
@@ -159,13 +150,13 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 **事件记录表**：事件触发记录表，每间隔一定时间就依次检查一遍每个事件是否满足，如果该事件满足则插入一条记录。用于当某事件发生时插入一条信息，如报警信息和产线动作记录。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/> 
 
 指定“自动创建”，如果数据表不存在是否自动创建。指定“自动删除”，如果数据表已存在，则是否先删除。处理逻辑和数据库一样。
 
 设定“时间常数”，指示不同类型数据表更新/插入/检查事件的事件间隔，单位为毫秒。
 
-设定“记录限定数”，适用于定时记录表和事件记录表。等于0代表无限制，大于0为记录的限定数。当超过限定数时插入一条新记录会删除一条旧记录。删除的旧记录是按照ID字段排序的，因此当该参数大于0时要求表必须定义一个名为ID的自增字段
+设定“记录限定数”，适用于定时记录表和事件记录表。等于0代表无限制，大于0为记录的限定数。当超过限定数时插入一条新记录会删除一条旧记录。删除的旧记录是按照ID字段排序的，因此当该参数大于0时要求表必须定义一个名为ID的自增字段。
 
 每个Table表都是独立和并行执行的，相互之间没有关联。表在被更新和插入时都会依次处理所有定义的字段。
 
@@ -184,31 +175,33 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 数据格式符、字段数据源、OPCUA标签需要配合设置：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image14.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image14.png" width="80%"/> 
+
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image15.png" width="80%"/>
 
 
 ### 2.4.5 OPC标签值字段配置 
 
 用于从OPCUA服务器读取一个变量值，并转换成需要的数据类型写入数据库。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image15.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image16.png" width="80%"/>
 
 
 打开“OPCUA标签选择”对话框，选择“已配置的数据源”，在“节点空间浏览”中选择需要链接的节点。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image16.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image17.png" width="80%"/>
 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image17.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image18.png" width="80%"/> 
 
 ### 2.4.6 列表值字段 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image18.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image19.png" width="80%"/>
 
 
 该字段仅当“数据格式符”为“ListValue”时才允许定义。其余配置和OPC标签值字段配置相同。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image19.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image20.png" width="80%"/>
 
 
 列表值字段用于配置列表属性。
@@ -225,12 +218,12 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 ### 2.4.7 事件节点 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image20.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image21.png" width="80%"/>
 
 
-事件记录表中可以配置多个Event节点，每个Event节点定义一个发生的事件。一个表内可以定义多个Event节点，这些Event节点将被单独扫描处理，每个满足触发条件的Event都将引起插入一条完整的记录。。
+事件记录表中可以配置多个Event节点，每个Event节点定义一个发生的事件。一个表内可以定义多个Event节点，这些Event节点将被单独扫描处理，每个满足触发条件的Event都将引起插入一条完整的记录。
 
-触发类型：目前仅支持对位值的跳变检查，“上升沿触发”代表0-1上升沿跳变，“下降沿触发”代表1-0下降沿跳变。支持值变化检查，当Event节点值发生变化，即触发事件。
+触发类型：支持对位值的跳变检查，“上升沿触发”代表0-1上升沿跳变，“下降沿触发”代表1-0下降沿跳变。支持值变化检查，当Event节点值发生变化，即触发事件。
 
 复位触发信号：目前仅可设置为“无”或者“复位触发信号”，当设置为"复位"时，当事件发生后自动复位事件对应的OPCUA变量（即“OPCUA标签”定义的变量）。
 
@@ -240,66 +233,66 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 只有在事件记录表中可以创建该字段。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image21.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image22.png" width="80%"/>
 
 
 将触发事件的文本填充到这个字段：即将上述“EVENT事件节点”中定义的“事件关联文本”，填充到字段中。这样，对于不同的事件就可以记录不同的内容，譬如记录所有报警的表或者设备的所有动作。
 
 ### 2.4.9 常用字段举例 
 
-自增主键字段（自增字段必须设置为主键）
+**自增主键字段（自增字段必须设置为主键）**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image22.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/> 
 
-日期时间字段
+**日期时间字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/>
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>
 
 
-固定数值字段
+**固定数值字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image25.png" width="80%"/> 
 
-固定字符串字段
+**固定字符串字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image25.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image26.png" width="80%"/> 
 
-OPC标签值字段
+**OPC标签值字段**
 
 将OPCUA整数变量值填充到整数字段：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image26.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image27.png" width="80%"/> 
 
 将OPCUA浮点数变量值填充到单精度字段（格式化为3位小数）：
-
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image27.png" width="80%"/>
-
-
-将OPCUA整数变量值填充到字符串字段，%d前后加单引号：
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image28.png" width="80%"/>
 
 
-将OPCUA整数变量值转换为16进制数值填充到字符串字段：
+将OPCUA整数变量值填充到字符串字段，%d前后加单引号：
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image29.png" width="80%"/>
 
 
+将OPCUA整数变量值转换为16进制数值填充到字符串字段：
+
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image30.png" width="80%"/>
+
+
 将OPCUA字符串变量值填充到字符串字段，%s前后加单引号：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image30.png" width="80%"/>}
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image31.png" width="80%"/> 
 
-列表值字段
+**列表值字段**
 
 例：当OPCUA变量值为1，该字段写入“列表值=1”；当OPCUA变量大于2，该字段写入“列表值=2”。
-
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image31.png" width="80%"/>
-
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image32.png" width="80%"/>
 
 
 <img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image33.png" width="80%"/>
+
+
+<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image34.png" width="80%"/>
 
 
 2.5 配置注意事项 
