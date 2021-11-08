@@ -2,6 +2,7 @@
   * [MES DATA SERVER](pages/mes.md)
   * [西门子数控驱动](pages/numerical.md)
   * [SCAEdge驱动使用手册](pages/MDC_OPCUA_Drivers-User_Manual.md)
+  * [OPCUA_SerialDevice驱动手册](pages/OPCUA_SerialDevice驱动手册.md)
   * [syncDATA操作手册](pages/syncDATA操作手册.md)
   * [欧姆龙以太网TCP](pages/欧姆龙以太网TCP.md)
   * [欧姆龙RS232](pages/欧姆龙RS232.md)
@@ -16,6 +17,7 @@
   * [EdgeSystem驱动测试](pages/EdgeSystem驱动测试.md)
   * [Modbus串口驱动测试](pages/Modbus串口驱动测试.md)
   * [ModbusTcp驱动测试](pages/ModbusTcp驱动测试.md)
+
 
 
   
