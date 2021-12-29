@@ -50,7 +50,7 @@ Edge模块内部默认安装了MYSQL/MariaDB数据库实例。数据库文件也
 1.4 应用架构 
 ------------
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image2.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image2.png" width="80%"/>
 
 
 第2章 EdgePlant配置 
@@ -59,13 +59,13 @@ Edge模块内部默认安装了MYSQL/MariaDB数据库实例。数据库文件也
 2.1 查看配置 
 ------------
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image3.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image3.png" width="80%"/>
 
 
 运行EdgePlant软件，根据所使用的网卡，搜索并连接到模块；选择“应用软件”；选择“数据存储”，打开MES
 DATA SERVER软件的配置。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image4.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image4.png" width="80%"/>
 
 
 读取模块配置：读取Edge中现有配置文件
@@ -81,13 +81,13 @@ DATA SERVER软件的配置。
 
 ### 2.2.1 程序开机自启 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image5.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image5.png" width="80%"/>
 
 
 在“系统设置/软件管理/数据储存”菜单下，找到“MES DATA
 SERVER”软件，复制“文件路径”，打开“开机启动”菜单。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image6.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image6.png" width="80%"/>
 
 
 新建配置，自定义“软件名称”，将上述复制的“文件路径”粘贴到“软件路径”，设置启动延时，通常为“1000毫秒”，最后下载配置。
@@ -97,7 +97,7 @@ SERVER程序都会自动运行。
 
 ### 2.2.2 程序重启 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image7.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image7.png" width="80%"/>
 
 
 选择“系统设置/系统信息/系统/进程列表”，在进程列表下找到“MES\_DATA\_SERVER”进程，双击打开进程，可以选择“重启进程”或“终止进程”。
@@ -110,13 +110,13 @@ SERVER程序都会自动运行。
 数据源定义用于指定整个配置文件的外部数据源，可以定义多个OPCUA
 SERVER连接。（Mes.Data.Server从外部数据源获取数据并插入到指定的表单中）
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image8.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image8.png" width="80%"/> 
 
 右键“数据源定义”，添加OPCUA服务器。自定义“服务器名称”，终结点格式为“opc.tcp://ip地址:端口号”，如果使用Edge的内置OPCUA服务器，终结点中的IP地址，需要设置为当前电脑所连接Edge模块的网口IP地址。
 
 Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电脑通过Edge的Eth0连接，终结点设置为“opc.tcp://192.168.10.118:4840”。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image9.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image9.png" width="80%"/>
 
 
 2.4 数据库服务器连接 
@@ -128,7 +128,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 右键添加数据库服务器连接。“服务器IP”为数据库实例所在的远程计算机的IP地址，注意通过网络访问需要开启3306端口。指定一个能够远程访问，并拥有足够数据库操作权限的账号密码，用于连接远程数据库。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image10.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image10.png" width="80%"/>
 
 
 ### 2.4.2 数据库配置 
@@ -137,7 +137,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 程序运行首先会执行“自动删除”，再执行“自动创建”。因此，如果不想要删除原来的数据库，则避免多个数据库名称重复，或者指定“自动删除”为“否”。“自动创建”必须设置为“是”。在数据库服务器连接下，可以定义多个数据库。如果需要，可以将多张表划分到不同的数据库中。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image11.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image11.png" width="80%"/>
 
 
 ### 2.4.3 数据表配置 
@@ -150,7 +150,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 **事件记录表**：事件触发记录表，每间隔一定时间就依次检查一遍每个事件是否满足，如果该事件满足则插入一条记录。用于当某事件发生时插入一条信息，如报警信息和产线动作记录。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image12.png" width="80%"/> 
 
 指定“自动创建”，如果数据表不存在是否自动创建。指定“自动删除”，如果数据表已存在，则是否先删除。处理逻辑和数据库一样。
 
@@ -166,7 +166,7 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 可以选中字段上下移动，调整数据表格式。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image13.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image13.png" width="80%"/>
 
 
 字段名称、字段别名：即数据表中的字段名称和注释。
@@ -175,33 +175,33 @@ Edge模块的IP地址，可以在EdgePlant软件左下角查看。如此时电�
 
 数据格式符、字段数据源、OPCUA标签需要配合设置：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image14.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image14.png" width="80%"/> 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image15.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image15.png" width="80%"/>
 
 
 ### 2.4.5 OPC标签值字段配置 
 
 用于从OPCUA服务器读取一个变量值，并转换成需要的数据类型写入数据库。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image16.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image16.png" width="80%"/>
 
 
 打开“OPCUA标签选择”对话框，选择“已配置的数据源”，在“节点空间浏览”中选择需要链接的节点。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image17.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image17.png" width="80%"/>
 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image18.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image18.png" width="80%"/> 
 
 ### 2.4.6 列表值字段 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image19.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image19.png" width="80%"/>
 
 
 该字段仅当“数据格式符”为“ListValue”时才允许定义。其余配置和OPC标签值字段配置相同。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image20.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image20.png" width="80%"/>
 
 
 列表值字段用于配置列表属性。
@@ -218,7 +218,7 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 ### 2.4.7 事件节点 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image21.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image21.png" width="80%"/>
 
 
 事件记录表中可以配置多个Event节点，每个Event节点定义一个发生的事件。一个表内可以定义多个Event节点，这些Event节点将被单独扫描处理，每个满足触发条件的Event都将引起插入一条完整的记录。
@@ -233,7 +233,7 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 只有在事件记录表中可以创建该字段。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image22.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image22.png" width="80%"/>
 
 
 将触发事件的文本填充到这个字段：即将上述“EVENT事件节点”中定义的“事件关联文本”，填充到字段中。这样，对于不同的事件就可以记录不同的内容，譬如记录所有报警的表或者设备的所有动作。
@@ -242,57 +242,57 @@ OPCUA标签：可直接复制列表值字段中选择的OPCUA标签。
 
 **自增主键字段（自增字段必须设置为主键）**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image23.png" width="80%"/> 
 
 **日期时间字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image24.png" width="80%"/>
 
 
 **固定数值字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image25.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image25.png" width="80%"/> 
 
 **固定字符串字段**
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image26.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image26.png" width="80%"/> 
 
 **OPC标签值字段**
 
 将OPCUA整数变量值填充到整数字段：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image27.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image27.png" width="80%"/> 
 
 将OPCUA浮点数变量值填充到单精度字段（格式化为3位小数）：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image28.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image28.png" width="80%"/>
 
 
 将OPCUA整数变量值填充到字符串字段，%d前后加单引号：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image29.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image29.png" width="80%"/>
 
 
 将OPCUA整数变量值转换为16进制数值填充到字符串字段：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image30.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image30.png" width="80%"/>
 
 
 将OPCUA字符串变量值填充到字符串字段，%s前后加单引号：
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image31.png" width="80%"/> 
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image31.png" width="80%"/> 
 
 **列表值字段**
 
 例：当OPCUA变量值为1，该字段写入“列表值=1”；当OPCUA变量大于2，该字段写入“列表值=2”。
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image32.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image32.png" width="80%"/>
 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image33.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image33.png" width="80%"/>
 
 
-<img src="https://help.blob.core.chinacloudapi.cn/helppic/mes/image34.png" width="80%"/>
+<img src="https://lingdingstorage.blob.core.chinacloudapi.cn/helppic/mes/image34.png" width="80%"/>
 
 
 2.5 配置注意事项 
